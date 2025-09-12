@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true skilled27/workflow_with_docker npm run test
+
+# Note: Not actual data, replace with your own
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-east-1"
+#   app: "workflow-with-docker"
+#   env: "Workflowwithdocker-env"
+#   bucket_name: "elasticbeanstalk-us-east-1"
+#   bucket_path: "workflow-with-docker"
+#   on:
+#     branch: main
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: $AWS_SECRET_KEY
